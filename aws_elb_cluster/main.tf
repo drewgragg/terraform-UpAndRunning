@@ -4,6 +4,7 @@ provider "aws" {
   profile                 = "packer_test"
 }
 
+
 resource "aws_launch_configuration" "example" {
   image_id        = "ami-40d28157"
   instance_type   = "t2.micro"
@@ -38,7 +39,7 @@ resource "aws_autoscaling_group" "example" {
 }
 
 resource "aws_security_group" "instance" {
-  name = "terraform-example-instance"
+  name = "terraform-example-instance2"
 
   ingress {
     from_port   = "${var.server_port}"
